@@ -1,12 +1,12 @@
 /*
- * Modal Box v1.1.4
+ * Modal Box v1.2.0
  * http://webgadgets.net/plugins/modal-box
  *
  * Copyright 2017, WebGadgets
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Date: 2017-04-15
+ * Date: 2017-05-24
  *
  */
 (function ($) {
@@ -25,6 +25,7 @@
             keyboard: true, // 	Closes the modal when escape key is pressed
             innerScroll: false,
             remote: null, // load content with ajax
+            theme: '',
             responsive:{},
             onInitialize: function (e) {}, //event/callback
             onBeforeClose: function (e) {}, //event/callback
@@ -50,12 +51,22 @@
                 el.unwrap();
                 el.parent('.bg-wg-modal').removeClass('closing');
             }, 400);
+            $(el).css('padding-top','');
             settings.onAfterClose.call(el,el);
         };
         el.openModal = function () {
             if (el.parent().hasClass('bg-wg-modal') === false) {
                 settings.onBeforeOpen.call(el,el);
                 el.wrap('<div class="bg-wg-modal"></div>');
+                
+                if ( $(el).children('.wg-content').children('.wg-header').length > 0 ) {
+                    var headerHeight = $(el).children('.wg-content').children('.wg-header').outerHeight();
+                    console.log(headerHeight);
+                    $(el).css({
+                        'padding-top': parseFloat(headerHeight) + parseFloat($(el).css('padding-top'))
+                    });
+                }
+                
                 settings.onAfterOpen.call(el,el);
             }
         };
@@ -139,7 +150,6 @@
                 $(this_e).css('margin-bottom', settings.bottomOffset);
             }
             if (settings.innerScroll === true) {
-                //TODO max-height: calc(100vh - 210px);
                 $(this_e).addClass('innerScroll');
                 var sum_offset = null;
                 var mt = parseFloat($(this_e).css('margin-top'));
@@ -152,6 +162,12 @@
                 var sum_offset_val = 'calc(100vh - ' + sum_offset + 'px)';
                 $(this_e).children('.wg-content').css('max-height', sum_offset_val);
             }
+            if (settings.theme !== '') {
+                $(this_e).addClass(settings.theme);
+            }
+            
+            
+            
 
             if (settings.openAfterNClicks !== null) {
                 var x = 12 * 12; //or whatever offset

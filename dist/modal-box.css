@@ -63,7 +63,17 @@
     height: 34px;
     width: 34px;
     text-align: center;
+    z-index: 1;
 }
+.wg-modal .wg-header {
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
     from {top: -300px; opacity: 0}

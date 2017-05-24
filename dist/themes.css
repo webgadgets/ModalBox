@@ -1,0 +1,19 @@
+.wg-modal.info .wg-header {
+    background-color: #3392DE;
+    color: #fff;
+}
+.wg-modal.success .wg-header {
+    background-color: #41AB45;
+    color: #fff;
+}
+.wg-modal.warning .wg-header {
+    background-color: #F89708;
+    color: #fff;
+}
+.wg-modal.danger .wg-header {
+    background-color: #EF3A2D;
+    color: #fff;
+}
+.wg-modal.info .wg-modal-close, .wg-modal.success .wg-modal-close, .wg-modal.warning .wg-modal-close, .wg-modal.danger .wg-modal-close {
+    color: #fff;
+}

@@ -3,13 +3,17 @@
     <head>
         <title>MODAL BOX</title>
         <meta charset="UTF-8">
-        <script src="jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="dist/modal-box.min.js"></script>
         <link rel="stylesheet" type="text/css" href="dist/modal-box.min.css" />
+        <link rel="stylesheet" type="text/css" href="dist/themes.min.css" />
         <style>
             * {
                 box-sizing: border-box;
+            }
+            body {
+                font-family: arial;
             }
         </style>
     </head>
@@ -66,6 +70,67 @@
         <button type="button" id="open-modal7">Open modal 7</button>
         <div id="my-modal7"></div>
         <br /><br />
+        
+        <h2>Modal box - header</h2>
+        <button type="button" id="open-modal-header">Open modal</button>
+        <div id="my-modal-header">
+            <div class="wg-header">Header</div>
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+        </div>
+        <br /><br />
+        <br /><br />
+        <h2>Modal box - header info</h2>
+        <button type="button" id="open-modal-info">Open modal</button>
+        <div id="my-modal-info">
+            <div class="wg-header">Header</div>
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+        </div>
+        <br /><br />
+        <br /><br />
+        <h2>Modal box - header success</h2>
+        <button type="button" id="open-modal-success">Open modal</button>
+        <div id="my-modal-success">
+            <div class="wg-header">Header</div>
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+        </div>
+        <br /><br />
+        <br /><br />
+        <h2>Modal box - header warning</h2>
+        <button type="button" id="open-modal-warning">Open modal</button>
+        <div id="my-modal-warning">
+            <div class="wg-header">Header</div>
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+        </div>
+        <br /><br />
+        <br /><br />
+        <h2>Modal box - header danger</h2>
+        <button type="button" id="open-modal-danger">Open modal</button>
+        <div id="my-modal-danger">
+            <div class="wg-header">Header</div>
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+            modal box - content<br />
+        </div>
+        <br /><br />
+        <br /><br />
 
 
         <script>
@@ -107,6 +172,26 @@
                 $("#my-modal7").wgModal({
                     triggerElement: '#open-modal7',
                     remote:'ajax/test.html',
+                });
+                
+                $("#my-modal-header").wgModal({
+                    triggerElement: '#open-modal-header',
+                });
+                $("#my-modal-info").wgModal({
+                    triggerElement: '#open-modal-info',
+                    theme:'info'
+                });
+                $("#my-modal-success").wgModal({
+                    triggerElement: '#open-modal-success',
+                    theme:'success'
+                });
+                $("#my-modal-warning").wgModal({
+                    triggerElement: '#open-modal-warning',
+                    theme:'warning'
+                });
+                $("#my-modal-danger").wgModal({
+                    triggerElement: '#open-modal-danger',
+                    theme:'danger'
                 });
 //                mymodal.openModal();
             });
