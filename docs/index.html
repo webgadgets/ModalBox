@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Documentation</title>
+    </head>
+    <body>
+        <h1>Modal box - Documentation</h1>
+
+        <h2>Options:</h2>
+
+        <p><strong>triggerElement</strong></p>
+
+        <p>Type:string<br />
+            Default: empty string</p>
+
+        <p><br />
+            <strong>openDelay</strong></p>
+
+        <p>Type:number<br />
+            Default: null<br />
+            Description: opens after <strong>X</strong> time in milliseconds</p>
+
+        <p><br />
+            <strong>openScrolled</strong></p>
+
+        <p>Type:number<br />
+            Default: null<br />
+            Description: Modal box will open when user scrolls from top of the page after given pixels</p>
+
+        <p><br />
+            <strong>openAfterNClicks</strong></p>
+
+        <p>Type:number<br />
+            Default: null<br />
+            Description: Modal box will open after <strong>N</strong> click. This option is using a cookie to count the clicks.</p>
+
+        <p><br />
+            <strong>width</strong></p>
+
+        <p>Type:string<br />
+            Default: null<br />
+            Descripion: Set width for the Modal box element</p>
+
+        <p><br />
+            <strong>verticalCentering</strong></p>
+
+        <p>Type:boolean<br />
+            Default: false</p>
+
+        <p><br />
+            <strong>topOffset</strong></p>
+
+        <p>Type:string<br />
+            Default: null<br />
+            Description: Offset from top of the viewport</p>
+
+        <p><br />
+            <strong>bottomOffset</strong></p>
+
+        <p>Type:string<br />
+            Default: null<br />
+            Description: Offset from bottom of the viewport</p>
+
+        <p><br />
+            <strong>keyboard</strong></p>
+
+        <p>Type:boolean<br />
+            Default: false<br />
+            Description: Closes the Modal box when escape key is pressed</p>
+
+        <p><br />
+            <strong>innerScroll</strong></p>
+
+        <p>Type:boolean<br />
+            Default: false<br />
+            Description: Enables inner scroll and is visible only if the content is larger than the height of the viewport.</p>
+
+        <p><br />
+            <strong>remote</strong></p>
+
+        <p>Type:string<br />
+            Default: null<br />
+            Description: Enter URL from which the content will be loaded (loaded with AJAX).</p>
+
+        <p><br />
+            <strong>responsive</strong></p>
+
+        <p>Type:object<br />
+            Default: empty object<br />
+            Description: object containing responsive options or events</p>
+
+        <p><br />
+            <strong>theme</strong>Type: string</p>
+
+        <p>Default: empty string<br />
+            Description: Include <strong>themes.css</strong> into header. You can use the already created themes or you can create your own. There&#39;s a <strong>info</strong>, <strong>success</strong>, <strong>warning</strong><strong> </strong>and<strong> </strong><strong>skyblue</strong> theme.</p>
+
+        <p>&nbsp;</p>
+
+        <p>&nbsp;</p>
+
+        <h2>Methods:</h2>
+
+        <p><strong>openModal</strong>This method opens the Modal box. Call <strong>openModal() </strong>method on a plugin instance.</p>
+
+        <p>[code]</p>
+
+        <pre>
+modal.openModal();
+        </pre>
+
+        <p><br />
+            <strong>closeModal</strong>This method closes the Modal box. Call <strong>closeModal() </strong>method on a plugin instance.</p>
+
+        <p>[code]</p>
+
+        <pre>
+modal.closeModal();</pre>
+
+        <p>&nbsp;</p>
+
+        <h2>Events:</h2>
+
+        <p><strong>onInitialize</strong></p>
+
+        <p>Runs a function after initialization.</p>
+
+        <p><br />
+            <strong>onBeforeOpen</strong></p>
+
+        <p>Runs a function before opening the Modal box.</p>
+
+        <p><br />
+            <strong>onAfterOpen</strong></p>
+
+        <p>Runs a function after opening.</p>
+
+        <p><br />
+            <strong>onBeforeClose</strong></p>
+
+        <p>Runs a function before closing the Modal box.</p>
+
+        <p><br />
+            <strong>onAfterClose</strong></p>
+
+        <p>Runs a function after closing the Modal box.</p>
+
+    </body>
+</html>
