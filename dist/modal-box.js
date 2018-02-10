@@ -1,12 +1,12 @@
 /*
- * Modal Box v1.2.0
+ * Modal Box v1.2.1
  * http://webgadgets.net/plugins/modal-box
  *
- * Copyright 2017, WebGadgets
+ * Copyright 2018, WebGadgets
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  *
- * Date: 2017-05-24
+ * Date: 2018-02-10
  *
  */
 (function ($) {
@@ -48,8 +48,10 @@
             settings.onBeforeClose.call(el,el);
             el.parent('.bg-wg-modal').addClass('closing');
             setTimeout(function(){
-                el.unwrap();
-                el.parent('.bg-wg-modal').removeClass('closing');
+                if (el.parent().hasClass('bg-wg-modal')) {
+                    el.unwrap('.bg-wg-modal');
+                    el.parent('.bg-wg-modal').removeClass('closing');
+                }
             }, 400);
             $(el).css('padding-top','');
             settings.onAfterClose.call(el,el);
